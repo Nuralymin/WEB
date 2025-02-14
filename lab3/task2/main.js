@@ -7,7 +7,7 @@ function addTask() {
         return;
     }
 
-    let li = document.createElement("li"); // This automatically adds a bullet point
+    let li = document.createElement("li");
     li.textContent = taskInput.value;
 
     // Click to toggle strikethrough
