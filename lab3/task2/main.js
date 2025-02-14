@@ -10,22 +10,21 @@ function addTask() {
     let li = document.createElement("li");
     li.textContent = taskInput.value;
 
-    // Click to toggle strikethrough
     li.addEventListener("click", function () {
-        li.classList.toggle("completed"); // Toggle strikethrough effect
+        li.classList.toggle("completed");
     });
 
-    // Create trash icon for delete button
+    
     let deleteBtn = document.createElement("img");
-    deleteBtn.src = "trash.png"; // Use your trash icon image
+    deleteBtn.src = "trash.png"; 
     deleteBtn.classList.add("trash-icon");
     deleteBtn.onclick = function () {
         li.remove();
     };
 
-    // Append delete button to list item
+    
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
 
-    taskInput.value = ""; // Clear input field
+    taskInput.value = "";
 }
